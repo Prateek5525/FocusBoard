@@ -1,0 +1,17 @@
+# Node.js dependencies (if you ever use npm/yarn)
+node_modules/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+*.stackdump
+
+# VS Code
+.vscode/
+
+# Chrome Extension specific (if any generated files were created, though unlikely for this project)
+# For example, if you had a build step that generated a 'dist' folder:
+# dist/

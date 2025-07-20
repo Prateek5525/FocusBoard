@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Dark Mode Toggle Button -->
+        <button id="dark-mode-toggle" class="mode-toggle-button">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Toggle Timer Visibility Button -->
+        <div class="card" style="text-align: center; padding: 10px 20px;">
+            <button id="toggle-timer-visibility-btn" class="control-button" style="width: 100%;">
+                <i class="fas fa-clock"></i> Show Pomodoro Timer
+            </button>
+        </div>
+
+        <!-- Pomodoro Timer Section (initially hidden, slides down when toggled) -->
+        <div id="pomodoro-container" class="card timer-hidden">
+            <div class="timer-content-wrapper"> <!-- NEW WRAPPER FOR HORIZONTAL SLIDE -->
+                <div id="timer-display">25:00</div>
+                <div id="timer-controls">
+                    <button id="start-timer-btn" class="control-button"><i class="fas fa-play"></i> Start</button>
+                    <button id="pause-timer-btn" class="control-button" disabled><i class="fas fa-pause"></i> Pause</button>
+                    <button id="reset-timer-btn" class="control-button"><i class="fas fa-redo"></i> Reset</button>
+                    <button id="toggle-mode-btn" class="control-button"><i class="fas fa-sync-alt"></i> Break Mode</button>
+                </div>
+
+                <!-- Custom Timer Inputs -->
+                <div id="custom-timer-inputs" style="margin-top: 20px;">
+                    <h4 style="margin-bottom: 10px; color: #555;">Custom Durations</h4>
+                    <div class="input-group">
+                        <label for="work-minutes">Work (min):</label>
+                        <input type="number" id="work-minutes" value="25" min="1" max="120">
+                        <label for="break-minutes">Break (min):</label>
+                        <input type="number" id="break-minutes" value="5" min="1" max="60">
+                    </div>
+                    <button id="set-custom-time-btn" class="control-button" style="margin-top: 10px;">Set Custom Time</button>
+                </div>
+            </div> <!-- END NEW WRAPPER -->
+        </div>
+
+        <!-- Kanban Board Section -->
+        <div id="kanban-container">
+            <div id="task-input-container" class="card">
+                <input type="text" id="new-task-input" placeholder="Add a new task...">
+                <button id="add-task-btn" class="control-button"><i class="fas fa-plus"></i> Add Task</button>
+            </div>
+
+            <div id="quadrants-grid">
+                <!-- Urgent & Important -->
+                <div class="quadrant" data-quadrant-id="urgent-important">
+                    <h3>Urgent & Important</h3>
+                    <div class="tasks-list"></div>
+                </div>
+
+                <!-- Not Urgent but Important -->
+                <div class="quadrant" data-quadrant-id="not-urgent-important">
+                    <h3>Not Urgent but Important</h3>
+                    <div class="tasks-list"></div>
+                </div>
+
+                <!-- Urgent but Not Important -->
+                <div class="quadrant" data-quadrant-id="urgent-not-important">
+                    <h3>Urgent but Not Important</h3>
+                    <div class="tasks-list"></div>
+                </div>
+
+                <!-- Not Urgent & Not Important -->
+                <div class="quadrant" data-quadrant-id="not-urgent-not-important">
+                    <h3>Not Urgent & Not Important</h3>
+                    <div class="tasks-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

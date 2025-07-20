@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "FocusBoard",
+    "version": "1.0",
+    "description": "An Eisenhower Matrix Kanban board with a Pomodoro timer for enhanced focus.",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "permissions": ["storage"]
+}
