@@ -77,17 +77,17 @@ To set up and run FocusBoard on your local machine:
 
 ## Project Directory Structure
 FocusBoard/
-├── manifest.json         # Extension manifest (permissions, details)
-├── popup.html            # Main HTML for the extension's popup UI (Kanban + Toggleable Timer)
-├── popup.js              # JavaScript logic for Kanban board, Pomodoro timer, and UI interactions
-├── style.css             # Shared CSS for all UI elements and animations
-├── icons/                # Folder containing extension icons (16x16, 48x48, 128x128)
+├── manifest.json         - Extension manifest (permissions, details)
+├── popup.html            - Main HTML for the extension's popup UI (Kanban + Toggleable Timer)
+├── popup.js              - JavaScript logic for Kanban board, Pomodoro timer, and UI interactions
+├── style.css             - Shared CSS for all UI elements and animations
+├── icons/                - Folder containing extension icons (16x16, 48x48, 128x128)
 │   ├── icon16.png
 │   ├── icon48.png
 │   └── icon128.png
-├── sounds/               # Folder for audio alerts
-│   └── alarm.mp3         # Pomodoro timer alarm sound
-└── .gitignore            # Specifies intentionally untracked files to ignore by Git
+├── sounds/               - Folder for audio alerts
+│   └── alarm.mp3         - Pomodoro timer alarm sound
+└── .gitignore            - Specifies intentionally untracked files to ignore by Git
 
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements or new features, please feel free to:
